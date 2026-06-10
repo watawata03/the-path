@@ -1,0 +1,24 @@
+<h1>キャラクター検索</h1>
+
+<form method="get">
+    <input type="text" name="keyword" value="{{ keyword }}" placeholder="キャラクター名を入力">
+    <button type="submit">検索</button>
+</form>
+
+<hr>
+
+{% for character in characters %}
+    <div>
+        <h2>
+            <a href="{% url 'character_detail' character.id %}">
+                {{ character.name }}
+            </a>
+        </h2>
+        <p>{{ character.description }}</p>
+    </div>
+    <hr>
+{% empty %}
+    <p>該当するキャラクターが見つかりませんでした。</p>
+{% endfor %}
+
+<a href="{% url 'home' %}">トップへ戻る</a>

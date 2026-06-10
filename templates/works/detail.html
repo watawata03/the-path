@@ -1,0 +1,7 @@
+<h1>{{ work.title }}</h1>
+
+<p>{{ work.description }}</p>
+<p>種別：{{ work.get_media_type_display }}</p>
+<p>初心者向け度：{{ work.beginner_level }}</p>
+
+<a href="{% url 'work_list' %}">作品一覧に戻る</a>

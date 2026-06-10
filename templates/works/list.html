@@ -1,0 +1,18 @@
+<h1>作品一覧</h1>
+
+{% for work in works %}
+    <div>
+
+        <h2>
+            <a href="{% url 'work_detail' work.id %}">
+                {{ work.title }}
+            </a>
+        </h2>
+
+        <p>{{ work.description }}</p>
+        <p>種別：{{ work.get_media_type_display }}</p>
+        <p>初心者向け度：{{ work.beginner_level }}</p>
+
+    </div>
+    <hr>
+{% endfor %}

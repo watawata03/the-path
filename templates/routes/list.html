@@ -1,0 +1,15 @@
+<h1>おすすめルート一覧</h1>
+
+{% for route in routes %}
+    <div>
+        <h2>
+            <a href="{% url 'route_detail' route.id %}">
+                {{ route.title }}
+            </a>
+        </h2>
+        <p>{{ route.description }}</p>
+    </div>
+    <hr>
+{% endfor %}
+
+<a href="{% url 'home' %}">トップへ戻る</a>

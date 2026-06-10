@@ -1,0 +1,15 @@
+<h1>{{ character.name }}</h1>
+
+<p>{{ character.description }}</p>
+
+<h2>登場作品</h2>
+
+{% for work in character.works.all %}
+    <p>
+        <a href="{% url 'work_detail' work.id %}">
+            {{ work.title }}
+        </a>
+    </p>
+{% endfor %}
+
+<a href="{% url 'character_list' %}">キャラクター一覧に戻る</a>

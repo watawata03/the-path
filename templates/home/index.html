@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>The Path</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+    <h1>The Path</h1>
+    <p>Find Your Way Through the Galaxy</p>
+
+    <p>
+        スターウォーズ初心者に向けて、あなたに合った作品の入り口を案内するナビゲーションサイトです。
+    </p>
+
+    <a href="{% url 'work_list' %}">作品一覧を見る</a>
+    <a href="{% url 'character_search' %}">キャラクターから探す</a>
+    <a href="{% url 'route_list' %}">おすすめルートを見る</a>
+    <p><a href="{% url 'diagnosis' %}">診断を始める</a>
+</p>
+
+</body>
+</html>

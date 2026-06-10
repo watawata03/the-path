@@ -1,0 +1,39 @@
+<h1>診断スタート</h1>
+
+<form method="post">
+    {% csrf_token %}
+
+    <p>どんな順番で見たいですか？</p>
+
+    <input
+        type="radio"
+        name="route_type"
+        value="classic"
+    >
+    人気の視聴順
+
+    <br><br>
+
+    <input
+        type="radio"
+        name="route_type"
+        value="timeline"
+    >
+    時系列順
+
+    <br><br>
+
+    <input
+        type="radio"
+        name="route_type"
+        value="mando"
+    >
+    マンダロリアンから興味を持った
+
+    <br><br>
+
+    <button type="submit">
+        診断する
+    </button>
+
+</form>
